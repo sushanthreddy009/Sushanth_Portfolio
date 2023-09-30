@@ -1,0 +1,16 @@
+.audio-container {
+    text-align: center;
+}
+h1{
+    color: purple;
+}
+h2{
+    color: maroon;
+    background-color: blueviolet;
+}
+h3{
+    color: maroon;
+}
+* {
+    background-color: white;
+}
