@@ -1,16 +1,45 @@
 .audio-container {
     text-align: center;
 }
-h1{
-    color: purple;
+
+h1 {
+    color: blueviolet;
+    padding: 20px;
 }
-h2{
-    color: maroon;
-    background-color: blueviolet;
+
+h2 {
+    color: #111111;
+    background-color: orangered;
+    padding: 20px;
+    margin: auto;
 }
-h3{
-    color: maroon;
+
+h3 {
+    color: orangered;
+    padding: 15px;
+    margin: auto;
 }
+
+h4{
+    color:orangered;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
 * {
-    background-color: white;
+    background-color: #111111;
 }
+
+
+p {
+    color: white; /* Set paragraph text color to white */
+    font-size: 1em;
+}
+
+ol {
+    color:white;
+}
+
+ul{
+    color: black;
+}/* Your existing CSS code */
