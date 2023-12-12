@@ -39,14 +39,15 @@ p, ol {
 
 /* Link Styles */
 a {
-    color: #ff8c00; /* Bright orange for links */
+    color: #007bff; /* Classic web link blue */
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
     font-weight: bold; /* Makes the link text bold */
 }
 
 a:hover {
-    color: #e85d00; /* Darker shade of orange on hover */
+    color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slightly raises the link */
 }
 
 footer {
@@ -80,6 +81,7 @@ img {
         padding-right: 10px;
     }
 }
+
 /* Hover Effects for Images */
 img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -96,7 +98,7 @@ a {
 }
 
 a:hover {
-    color: #e85d00; /* Changes color on hover */
+    color: #0056b3; /* Darker blue on hover */
     transform: translateY(-2px); /* Slightly raises the link */
 }
 
@@ -118,15 +120,4 @@ header, footer {
 
 body {
     animation: fadeInContent 1s ease;
-}
-/* Link Styles */
-a {
-    color: #007bff; /* Classic web link blue */
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover {
-    color: #0056b3; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slightly raises the link */
 }
