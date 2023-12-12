@@ -156,12 +156,12 @@ body {
 .project-details {
     list-style: none;
     padding: 0;
-    margin: 10px 0;
+    margin: 20px 0; /* Added margin for better spacing */
 }
 
 .project-details li {
     color: #333;
-    margin: 5px 0;
+    margin: 10px 0; /* Added margin for better spacing */
 }
 
 .project-link {
