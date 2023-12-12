@@ -3,23 +3,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;
-    color: #f0f0f0;
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333333; /* Dark gray text for readability */
 }
 
 header {
     text-align: center;
     padding: 20px;
+    background-color: #ffffff; /* White background for header */
 }
 
 h1 {
-    color: #7c4dff;
+    color: #0056b3; /* Professional blue for main heading */
     margin-bottom: 10px;
 }
 
 h2, h3 {
-    color: #ff9800;
+    color: #4a4a4a; /* Darker gray for subheadings */
     padding: 10px;
     margin-top: 20px;
 }
@@ -27,37 +28,37 @@ h2, h3 {
 p, ol {
     font-size: 1em;
     line-height: 1.6;
-    max-width: 800px;
-    margin: 10px auto;
+    color: #333333; /* Consistent text color */
 }
 
 a {
-    color: #7c4dff;
+    color: #007bff; /* Slightly brighter blue for links */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ff5722;
+    color: #0056b3; /* Darker blue on hover */
 }
 
 footer {
     text-align: center;
     padding: 10px;
     font-size: 0.8em;
+    background-color: #ffffff; /* White background for footer */
 }
 
 /* Section Styles */
 section {
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid #dddddd; /* Light border for separation */
     padding: 20px;
 }
 
 img {
     display: block;
     margin: 10px auto;
-    border-radius: 50%; /* Circular image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Image shadow */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
