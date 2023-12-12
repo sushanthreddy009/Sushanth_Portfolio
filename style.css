@@ -3,69 +3,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    background-color: #1a1a1a; /* Darker shade for background */
-    color: #f0f0f0; /* Lighter text color for better readability */
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
 }
 
-/* Container for any audio elements */
-.audio-container {
+header {
     text-align: center;
     padding: 20px;
 }
 
-/* Heading Styles */
 h1 {
-    color: #7c4dff; /* Vibrant purple */
-    padding: 20px;
-    text-transform: uppercase;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 4px #000000; /* Subtle text shadow for depth */
+    color: #7c4dff;
+    margin-bottom: 10px;
 }
 
-h2 {
-    color: #ffffff;
-    background-color: #ff5722; /* Deep orange */
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a 3D effect */
-    font-size: 1.75em;
-}
-
-h3 {
-    color: #ff5722;
-    padding: 15px;
-    margin: 15px auto;
-    font-size: 1.4em;
-}
-
-h4 {
-    color: #ff9800; /* Bright orange */
-    padding-top: 20px;
+h2, h3 {
+    color: #ff9800;
+    padding: 10px;
     margin-top: 20px;
-    font-weight: bold;
 }
 
-/* Paragraph Styles */
-p {
-    font-size: 1.1em;
-    line-height: 1.8;
+p, ol {
+    font-size: 1em;
+    line-height: 1.6;
     max-width: 800px;
     margin: 10px auto;
 }
 
-/* List Styles */
-ol, ul {
-    padding-left: 40px;
-}
-
-ol li, ul li {
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-/* Link Styles */
 a {
     color: #7c4dff;
     text-decoration: none;
@@ -73,7 +38,26 @@ a {
 }
 
 a:hover {
-    color: #ff9800;
+    color: #ff5722;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+/* Section Styles */
+section {
+    border-bottom: 1px solid #333333;
+    padding: 20px;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Image shadow */
 }
 
 /* Responsive Design */
@@ -82,7 +66,7 @@ a:hover {
         padding: 20px;
     }
 
-    h1, h2, h3, h4 {
+    h1, h2, h3 {
         padding-left: 10px;
         padding-right: 10px;
     }
