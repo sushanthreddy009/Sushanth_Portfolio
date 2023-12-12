@@ -31,14 +31,22 @@ p, ol {
     color: #333333; /* Consistent text color */
 }
 
+/* Audio Section Styles */
+.audio-section {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Link Styles */
 a {
-    color: #007bff; /* Slightly brighter blue for links */
+    color: #ff8c00; /* Bright orange for links */
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: bold; /* Makes the link text bold */
 }
 
 a:hover {
-    color: #0056b3; /* Darker blue on hover */
+    color: #e85d00; /* Darker shade of orange on hover */
 }
 
 footer {
