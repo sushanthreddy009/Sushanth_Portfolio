@@ -121,3 +121,57 @@ header, footer {
 body {
     animation: fadeInContent 1s ease;
 }
+
+/* Project Styles */
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project {
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project h2 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+.project-duration {
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.project-details {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.project-details li {
+    color: #333;
+    margin: 5px 0;
+}
+
+.project-link {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    color: #003a75;
+    transform: translateY(-2px);
+}
