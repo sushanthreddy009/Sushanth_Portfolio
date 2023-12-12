@@ -119,3 +119,14 @@ header, footer {
 body {
     animation: fadeInContent 1s ease;
 }
+/* Link Styles */
+a {
+    color: #007bff; /* Classic web link blue */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slightly raises the link */
+}
