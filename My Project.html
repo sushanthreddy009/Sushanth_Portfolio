@@ -98,7 +98,6 @@
 
 
     <script>
-        // Move your script inside the head to ensure they're loaded before the body content
         function showModal(modalId) {
             document.getElementById(modalId).style.display = 'block';
         }
@@ -107,14 +106,11 @@
             document.getElementById(modalId).style.display = 'none';
         }
 
-        // This function will be defined when the window loads
-        window.onload = function() {
-            window.onclick = function(event) {
-                if (event.target.classList.contains('modal')) {
-                    event.target.style.display = 'none';
-                }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
             }
-        };
+        }
     </script>
 </body>
 </html>
