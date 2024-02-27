@@ -6,6 +6,8 @@
     --background-secondary: #023047; /* Dark blue */
     --text-color: #fdfffc; /* Off-white */
     --hover-effect: #e71d36; /* Tomato red */
+    --modal-background: #fefefe; /* White */
+    --modal-overlay: rgba(0,0,0,0.4); /* Semi-transparent black */
 }
 
 body {
@@ -18,29 +20,8 @@ body {
     transition: background-color 0.5s ease;
 }
 
-/* Dynamic Background */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
-    clip-path: circle(30% at right 70%);
-    transition: clip-path 0.5s ease-out;
-}
-
-/* Header & Footer with Unique Styles */
-header, footer {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--background-secondary);
-    color: var(--text-color);
-}
-
-/* Innovative Button Styles */
-button, .button {
+/* Reusable styles */
+button {
     background-color: var(--primary-color);
     color: var(--text-color);
     border: none;
@@ -52,260 +33,184 @@ button, .button {
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-button:hover, .button:hover {
+button:hover {
     background-color: var(--hover-effect);
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Title and Text Enhancements */
-h1, h2, h3 {
-    color: var(--primary-color);
-    transition: color 0.3s ease;
+/* Header & Footer Styles */
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-secondary);
+    color: var(--text-color);
 }
 
-/* Interactive Hover Effects for Titles */
-h1:hover, h2:hover, h3:hover {
-    color: var(--accent-color);
+/* Project Cards Section */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px; /* Adjust the gap as needed */
+}
+
+.project-card {
+    background-color: var(--background-secondary);
+    border-radius: 10px;
+    width: calc(25% - 20px); /* Adjust width for 4 items in a row */
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
 
-/* Links Styling */
-a {
-    color: var(--accent-color);
-    transition: color 0.3s ease;
-    text-decoration: none;
+.project-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
 }
 
-a:hover {
-    color: var(--hover-effect);
-    text-decoration: underline;
-}
-
-/* Section and Image Styling */
-section {
-    background-color: var(--background-secondary);
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-}
-
-img {
-    max-width: 100%;
+.project-card img {
+    width: 100%;
     height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    display: block;
 }
 
-img:hover {
-    transform: scale(1.03);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    body::before {
-        clip-path: circle(50% at 50% 50%);
-    }
-}
-
-/* Unique Section Interaction */
-section:hover {
-    background-color: var(--primary-color);
-    color: var(--background-primary);
-}
-
-/* Enhancing Readability and Interaction */
-p, ol {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--text-color);
-}
-
-/* Footer and Header Animations for Dynamic Entry */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-header, footer {
-    animation: fadeIn 1s ease-out;
-}
-
-/* Consistent Styling for "Contact Me" and "My Skills" Sections */
-.contact-me, .my-skills {
-    background-color: var(--background-secondary);
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.contact-me:hover, .my-skills:hover {
-    background-color: var(--primary-color);
-    color: var(--background-primary);
-}
-
-/* Specific Styles for List Items in Skills Section */
-.my-skills ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.my-skills li {
-    background-color: var(--background-primary);
-    margin-bottom: 10px;
+.project-card h2 {
     padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.my-skills li:hover {
-    background-color: var(--accent-color);
-    color: var(--background-secondary);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Adjusting the Projects Section for Consistency */
-.project-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.project {
-    background-color: var(--background-secondary);
+    background-color: var(--primary-color);
     color: var(--text-color);
-    margin-bottom: 20px;
+    margin: 0;
+}
+
+.project-card p, .project-card button {
+    padding: 10px;
+    background-color: var(--background-primary);
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--modal-overlay); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: var(--modal-background);
+    margin: 10% auto; /* 10% from the top and centered */
     padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-}
-
-.project-title, .project-duration {
-    color: var(--primary-color);
-}
-
-.project-details {
-    list-style: none;
-    padding: 0;
-}
-
-.project-link {
-    color: var(--accent-color);
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
 }
 
-.project-link:hover {
-    color: var(--hover-effect);
-    text-decoration: underline;
-}
-
-/* Enhancing the Contact Me Section */
-.contact-me form input, .contact-me form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid var(--accent-color);
-    background-color: var(--background-primary);
-    color: var(--text-color);
-}
-
-.contact-me form input:focus, .contact-me form textarea:focus {
-    outline: none;
-    border-color: var(--hover-effect);
-    box-shadow: 0 0 5px rgba(231, 29, 54, 0.5);
-}
-
-.contact-me form button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.contact-me form button:hover {
-    background-color: var(--hover-effect);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-/* Placeholder Styling */
-::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+/* The Modal Heading */
+.modal-header h2 {
+    margin: 0;
 }
 
-/* Responsive Adjustments for Forms */
-@media (max-width: 768px) {
-    .contact-me form input, .contact-me form textarea, .contact-me form button {
-        width: calc(100% - 20px);
+/* Modal Body */
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 10px 16px;
+    background-color: var(--background-secondary);
+    color: var(--text-color);
+    text-align: right;
+}
+
+/* Responsive Layout */
+@media only screen and (max-width: 1200px) {
+    .project-card {
+        width: calc(33.333% - 20px); /* Adjust width for 3 items in a row */
     }
 }
 
-/* Ensure Consistent Styling Across Browsers */
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
+@media only screen and (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 20px); /* Adjust width for 2 items in a row */
+    }
 }
 
-/* Smooth Scrolling for Anchors */
-html {
-    scroll-behavior: smooth;
+@media only screen and (max-width: 480px) {
+    .project-card {
+        width: 100%; /* Full width for small screens */
+    }
+
+    .modal-content {
+        width: 90%; /* Most of the screen size */
+    }
 }
 
-/* Clearfix for Floating Elements */
+/* Clearfix for Modal */
 .clearfix::after {
     content: "";
-    display: table;
     clear: both;
+    display: table;
 }
 
-/* Responsive Font Sizes */
-@media (max-width: 768px) {
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.5em; }
-    h3 { font-size: 1.17em; }
+/* General Utility Classes */
+.hidden {
+    display: none !important;
 }
 
-/* Responsive Project Details */
-@media (max-width: 768px) {
-    .project {
-        padding: 10px;
-    }
-
-    .project-title, .project-duration {
-        font-size: smaller;
-    }
-
-    .project-details {
-        padding-left: 10px;
-    }
+.show {
+    display: block !important;
 }
 
-/* Print Styles */
-@media print {
-    body {
-        background-color: #FFFFFF;
-        color: #000000;
-    }
-
-    header, footer, button, .button {
-        display: none;
-    }
+/* Accessibility Improvements */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
+
 
    
 
