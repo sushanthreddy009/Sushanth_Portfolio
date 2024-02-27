@@ -267,6 +267,79 @@ button:hover, input[type="submit"]:hover, input[type="button"]:hover, .button:ho
 }
 
 
+/* Global Styles */
+body, h1, h2, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Project List */
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2em; /* Adjust the gap as needed */
+    padding: 1em;
+}
+
+/* Project Card */
+.project-card {
+    width: 300px; /* Adjust the width as needed */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card h2 {
+    background: #f4f4f4;
+    padding: 0.5em;
+    text-align: center;
+    color: #333;
+}
+
+.project-card button {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    background: #333;
+    color: white;
+    border: none;
+    font-size: 1em;
+}
+
+.project-card button:hover {
+    background: #555;
+}
+
+/* Project Details */
+.project-details {
+    padding: 2em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em 0;
+}
+
+
 
 
 
