@@ -161,7 +161,6 @@ header, footer {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .my-skills li:hover {
     background-color: var(--accent-color);
     color: var(--background-secondary);
@@ -233,122 +232,77 @@ header, footer {
     color: var(--text-color);
     border: none;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-me form button:hover {
     background-color: var(--hover-effect);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Customization for Form Elements to Match Theme */
-input[type="text"], input[type="email"], textarea {
-    background-color: var(--background-primary);
-    color: var(--text-color);
-    border: 1px solid var(--accent-color);
+/* Placeholder Styling */
+::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
-input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
-    border-color: var(--hover-effect);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+/* Responsive Adjustments for Forms */
+@media (max-width: 768px) {
+    .contact-me form input, .contact-me form textarea, .contact-me form button {
+        width: calc(100% - 20px);
+    }
 }
 
-/* Ensuring All Interactive Elements Have a Distinct Style */
-button, input[type="submit"], input[type="button"], .button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Ensure Consistent Styling Across Browsers */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
-button:hover, input[type="submit"]:hover, input[type="button"]:hover, .button:hover {
-    background-color: var(--hover-effect);
+/* Smooth Scrolling for Anchors */
+html {
+    scroll-behavior: smooth;
 }
 
-
-/* Global Styles */
-body, h1, h2, button {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+/* Clearfix for Floating Elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-/* Header */
-header {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.17em; }
 }
 
-/* Project List */
-.project-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2em; /* Adjust the gap as needed */
-    padding: 1em;
+/* Responsive Project Details */
+@media (max-width: 768px) {
+    .project {
+        padding: 10px;
+    }
+
+    .project-title, .project-duration {
+        font-size: smaller;
+    }
+
+    .project-details {
+        padding-left: 10px;
+    }
 }
 
-/* Project Card */
-.project-card {
-    width: 300px; /* Adjust the width as needed */
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+/* Print Styles */
+@media print {
+    body {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+
+    header, footer, button, .button {
+        display: none;
+    }
 }
-
-.project-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.project-card h2 {
-    background: #f4f4f4;
-    padding: 0.5em;
-    text-align: center;
-    color: #333;
-}
-
-.project-card button {
-    display: block;
-    width: 100%;
-    padding: 1em;
-    background: #333;
-    color: white;
-    border: none;
-    font-size: 1em;
-}
-
-.project-card button:hover {
-    background: #555;
-}
-
-/* Project Details */
-.project-details {
-    padding: 2em;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1em 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
