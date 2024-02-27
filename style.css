@@ -216,73 +216,7 @@ header, footer {
     text-align: center;
 }
 
-/* Modal Styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: var(--modal-overlay); /* Black w/ opacity */
-}
-
-.modal-content {
-    background-color: var(--modal-background);
-    margin: 10% auto; /* 10% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 60%; /* Could be more or less, depending on screen size */
-    border-radius: 10px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* The Modal Heading */
-.modal-header h2 {
-    margin: 0;
-}
-
-/* Modal Body */
-.modal-body {
-    padding: 2px 16px;
-}
-
-/* Modal Footer */
-.modal-footer {
-    padding: 10px 16px;
-    background-color: var(--background-secondary);
-    color: var(--text-color);
-    text-align: right;
-}
+/* ... existing modal styles ... */
 
 /* Responsive Layout */
 @media only screen and (max-width: 1200px) {
@@ -301,38 +235,6 @@ header, footer {
     .project-card {
         width: 100%; /* Full width for small screens */
     }
-
-    .modal-content {
-        width: 90%; /* Most of the screen size */
-    }
-}
-
-/* Clearfix for Modal */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* General Utility Classes */
-.hidden {
-    display: none !important;
-}
-
-.show {
-    display: block !important;
-}
-
-/* Accessibility Improvements */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
 }
 
 /* ... additional styles and media queries ... */
@@ -395,8 +297,3 @@ button, input[type="submit"], input[type="button"], .button {
 button:hover, input[type="submit"]:hover, input[type="button"]:hover, .button:hover {
     background-color: var(--hover-effect);
 }
-
-
-   
-
-
