@@ -1,110 +1,137 @@
-/* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-    background-color: #121212; /* Updated to a dark background */
-    color: #f4f4f4; /* Light text for contrast */
+/* CSS Variables for Theme Management */
+:root {
+    --primary-color: #6c5ce7; /* Vibrant purple */
+    --accent-color: #00b894; /* Mint green */
+    --background-primary: #0a0a0a; /* Deep black */
+    --background-secondary: #202020; /* Dark gray */
+    --text-color: #ffffff; /* Pure white */
+    --hover-effect: #ff7675; /* Soft red */
 }
 
 body {
-    animation: fadeInContent 1s ease; /* Preserving your animation */
-    background-image: linear-gradient(145deg, #121212, #1c1c1c); /* Shining effect */
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: var(--background-primary);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease;
 }
 
+/* Dynamic Background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
+    clip-path: circle(30% at right 70%);
+    transition: clip-path 0.5s ease-out;
+}
+
+/* Header & Footer with Unique Styles */
 header, footer {
     text-align: center;
     padding: 20px;
-    background-color: #1e1e1e; /* Darker shade for header/footer */
-    animation: fadeIn 1s ease; /* Preserving your animation */
+    background-color: var(--background-secondary);
+    color: var(--text-color);
 }
 
-h1, h2, h3 {
-    color: #76a9fa; /* Lighter blue for better visibility on dark background */
-}
-
-p, ol {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #f4f4f4; /* Adjusted for dark theme readability */
-}
-
-/* Enhanced Button and Link Styles */
-a, .project-link, button, .button {
-    color: #4db8ff; /* Brighter blue for links and buttons */
-    text-decoration: none;
+/* Innovative Button Styles */
+button, .button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
     font-weight: bold;
-    background-color: transparent; /* Buttons and links do not have a background by default */
-    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 20px; /* Rounded edges for a modern look */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-a:hover, .project-link:hover, button:hover, .button:hover {
-    color: #1a8cff; /* Brighter on hover */
-    transform: translateY(-2px); /* Lift effect */
-    background-color: #2a2a2a; /* Subtle background for buttons on hover */
+button:hover, .button:hover {
+    background-color: var(--hover-effect);
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Audio Section and Other Sections */
-.audio-section, section {
-    border-bottom: 1px solid #333333; /* Adjusted for dark theme */
+/* Title and Text Enhancements */
+h1, h2, h3 {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+/* Interactive Hover Effects for Titles */
+h1:hover, h2:hover, h3:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+/* Links Styling */
+a {
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover-effect);
+    text-decoration: underline;
+}
+
+/* Section and Image Styling */
+section {
+    background-color: var(--background-secondary);
     padding: 20px;
-    background-color: #2a2a2a; /* Slightly lighter than base for distinction */
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
-/* Image Hover Effects */
 img {
-    display: block;
-    margin: 10px auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow for dark theme */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.03);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    body {
-        padding: 20px;
-    }
-
-    h1, h2, h3 {
-        padding-left: 10px;
-        padding-right: 10px;
+    body::before {
+        clip-path: circle(50% at 50% 50%);
     }
 }
 
-/* Project Styles */
-.project {
-    margin-bottom: 40px;
-    border: 1px solid #444; /* Adjusted for dark theme */
-    background-color: #2a2a2a; /* For distinction */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow for dark theme */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Unique Section Interaction */
+section:hover {
+    background-color: var(--primary-color);
+    color: var(--background-primary);
 }
 
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+/* Enhancing Readability and Interaction */
+p, ol {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
 }
 
-.project h2 {
-    color: #76a9fa; /* Adjusted to fit the dark theme */
+/* Footer and Header Animations for Dynamic Entry */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.project-details, .project-duration {
-    color: #cccccc; /* Lighter text for details for readability */
+header, footer {
+    animation: fadeIn 1s ease-out;
 }
 
-/* Preserving your fadeInContent animation */
-@keyframes fadeInContent {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
 
 
 /* Include your original CSS here, replacing any conflicting styles with the above enhancements */
