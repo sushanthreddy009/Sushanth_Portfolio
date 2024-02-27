@@ -277,15 +277,7 @@ button:hover, input[type="submit"]:hover, input[type="button"]:hover, .button:ho
 
 
 
-/* Add to your existing style.css */
 
-.project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
 
 .project-card {
     background-color: var(--background-secondary);
@@ -307,22 +299,3 @@ button:hover, input[type="submit"]:hover, input[type="button"]:hover, .button:ho
     display: block;
 }
 
-.project-description {
-    padding: 15px;
-    font-size: 0.9rem;
-    color: var(--text-color);
-}
-
-.project-link {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    background: var(--primary-color);
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project-link:hover {
-    background: var(--hover-effect);
-}
