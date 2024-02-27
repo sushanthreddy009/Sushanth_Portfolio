@@ -1,11 +1,11 @@
 /* CSS Variables for Theme Management */
 :root {
-    --primary-color: #6c5ce7; /* Vibrant purple */
-    --accent-color: #00b894; /* Mint green */
-    --background-primary: #0a0a0a; /* Deep black */
-    --background-secondary: #202020; /* Dark gray */
-    --text-color: #ffffff; /* Pure white */
-    --hover-effect: #ff7675; /* Soft red */
+    --primary-color: #ff9f1c; /* Coral */
+    --accent-color: #2ec4b6; /* Turquoise */
+    --background-primary: #011627; /* Deep navy blue */
+    --background-secondary: #023047; /* Dark blue */
+    --text-color: #fdfffc; /* Off-white */
+    --hover-effect: #e71d36; /* Tomato red */
 }
 
 body {
@@ -47,7 +47,7 @@ button, .button {
     padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
-    border-radius: 20px; /* Rounded edges for a modern look */
+    border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
@@ -132,9 +132,139 @@ header, footer {
     animation: fadeIn 1s ease-out;
 }
 
+/* Consistent Styling for "Contact Me" and "My Skills" Sections */
+.contact-me, .my-skills {
+    background-color: var(--background-secondary);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-me:hover, .my-skills:hover {
+    background-color: var(--primary-color);
+    color: var(--background-primary);
+}
+
+/* Specific Styles for List Items in Skills Section */
+.my-skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.my-skills li {
+    background-color: var(--background-primary);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
 
-/* Include your original CSS here, replacing any conflicting styles with the above enhancements */
+.my-skills li:hover {
+    background-color: var(--accent-color);
+    color: var(--background-secondary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjusting the Projects Section for Consistency */
+.project-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project {
+    background-color: var(--background-secondary);
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.project-title, .project-duration {
+    color: var(--primary-color);
+}
+
+.project-details {
+    list-style: none;
+    padding: 0;
+}
+
+.project-link {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.project-link:hover {
+    color: var(--hover-effect);
+    text-decoration: underline;
+}
+
+/* Enhancing the Contact Me Section */
+.contact-me form input, .contact-me form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    background-color: var(--background-primary);
+    color: var(--text-color);
+}
+
+.contact-me form input:focus, .contact-me form textarea:focus {
+    outline: none;
+    border-color: var(--hover-effect);
+    box-shadow: 0 0 5px rgba(231, 29, 54, 0.5);
+}
+
+.contact-me form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-me form button:hover {
+    background-color: var(--hover-effect);
+}
+
+/* Customization for Form Elements to Match Theme */
+input[type="text"], input[type="email"], textarea {
+    background-color: var(--background-primary);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: var(--hover-effect);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensuring All Interactive Elements Have a Distinct Style */
+button, input[type="submit"], input[type="button"], .button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover, .button:hover {
+    background-color: var(--hover-effect);
+}
 
  appealing buttons. */
 
