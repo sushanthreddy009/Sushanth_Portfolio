@@ -209,12 +209,30 @@ header, footer {
     margin: 0;
 }
 
-.project-card p, .project-card button {
+.project-card p{
     padding: 10px;
     background-color: var(--background-primary);
     color: var(--text-color);
     text-align: center;
 }
+
+
+.project-button {
+  margin-top: 20px; /* Adjust the value as needed for desired spacing */
+  background-color: #3498db; /* This is a nice blue, but choose any color you like */
+  color: #ffffff; /* This is white, ensuring the text stands out against the button color */
+  padding: 10px 15px; /* Optional: Adjust padding to make the button bigger or smaller */
+  border: none; /* Optional: Remove the border for a cleaner look */
+  border-radius: 5px; /* Optional: Round the corners of the button */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+  transition: background-color 0.3s ease; /* Optional: Smooth transition for button hover effect */
+}
+
+.project-button:hover {
+  background-color: #2980b9; /* Darker shade of blue for hover effect */
+}
+
+
 
 /* ... existing modal styles ... */
 
