@@ -133,7 +133,7 @@ header, footer {
 }
 
 /* Consistent Styling for "Contact Me" and "My Skills" Sections */
-.contact-me, .my-skills, .my-projects {
+.contact-me, .my-skills {
     background-color: var(--background-secondary);
     padding: 20px;
     margin: 10px 0;
@@ -141,18 +141,18 @@ header, footer {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.contact-me:hover, .my-skills:hover, .my-projects:hover {
+.contact-me:hover, .my-skills:hover {
     background-color: var(--primary-color);
     color: var(--background-primary);
 }
 
 /* Specific Styles for List Items in Skills Section */
-.my-skills ul, .my-projects ul {
+.my-skills ul {
     list-style-type: none;
     padding: 0;
 }
 
-.my-skills li, .my-projects li {
+.my-skills li {
     background-color: var(--background-primary);
     margin-bottom: 10px;
     padding: 10px;
@@ -161,10 +161,50 @@ header, footer {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.my-skills li:hover, .my-projects li:hover {
+
+.my-skills li:hover {
     background-color: var(--accent-color);
     color: var(--background-secondary);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjusting the Projects Section for Consistency */
+.project-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project {
+    background-color: var(--background-secondary);
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.project-title, .project-duration {
+    color: var(--primary-color);
+}
+
+.project-details {
+    list-style: none;
+    padding: 0;
+}
+
+.project-link {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.project-link:hover {
+    color: var(--hover-effect);
+    text-decoration: underline;
 }
 
 /* Enhancing the Contact Me Section */
@@ -210,96 +250,20 @@ input[type="text"], input[type="email"], textarea {
 
 input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     border-color: var(--hover-effect);
-    box-shadow: 0 0 8px rgba
-    /* Continued Customization for Form Elements to Match Theme */
-    box-shadow: 0 0 8px rgba(231, 29, 54, 0.6);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
-    border-color: var(--primary-color);
-}
-
-/* Styling Submit Button to Stand Out */
-input[type="submit"], .contact-me form button {
-    background-color: var(--accent-color);
+/* Ensuring All Interactive Elements Have a Distinct Style */
+button, input[type="submit"], input[type="button"], .button {
+    background-color: var(--primary-color);
     color: var(--text-color);
     border: none;
-    padding: 12px 25px;
-    margin-top: 20px;
-    border-radius: 25px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-input[type="submit"]:hover, .contact-me form button:hover {
-    background-color: var(--hover-effect);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Ensuring the Projects Section Matches the Theme */
-.my-projects {
-    background-color: var(--background-secondary);
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 10px;
-}
-
-.my-projects h2 {
-    color: var(--primary-color);
-}
-
-.my-projects ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.my-projects li {
-    background-color: var(--background-primary);
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.my-projects li:hover {
-    background-color: var(--accent-color);
-    color: var(--background-secondary);
-}
-
-/* Responsive Design Adjustments */
-@media (max-width: 768px) {
-    header, footer {
-        text-align: center;
-    }
-
-    .contact-me form input, .contact-me form textarea {
-        width: calc(100% - 20px); /* Adjust width to account for padding */
-    }
-}
-
-/* Final Footer Styling */
-footer {
-    background-color: var(--background-primary);
-    color: var(--text-color);
-    padding: 10px;
-    text-align: center;
-}
-
-/* Global Link Styles */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Consistent Margin and Padding Across the Website */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+button:hover, input[type="submit"]:hover, input[type="button"]:hover, .button:hover {
+    background-color: var(--hover-effect);
 }
 
 
