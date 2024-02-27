@@ -309,10 +309,5 @@ html {
 
 
 .half-circle {
-    /* This might contain properties that create the shape, like: */
-    width: 200px;
-    height: 100px;
-    background: #somecolor;
-    border-radius: 100px 100px 0 0;
-    /* ... other properties ... */
+    display: none;
 }
