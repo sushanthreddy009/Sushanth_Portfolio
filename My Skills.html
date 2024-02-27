@@ -3,44 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>My Skills</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #111; /* Dark background */
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            text-align: center;
+            max-width: 1000px;
+            width: 100%;
+        }
+        .skill {
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: #555;
+        }
+        .skill i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .skill h2 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .skill p {
+            font-size: 16px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Programming Languages</h1>
-    <ul>
-        <li>C++</li>
-        <li>Python</li>
-        <li>Java</li>
-    </ul>
-    <h1>Artificial Intelligence & ML</h1>
-    <ul>
-        <li>Machine Learning Frameworks: TensorFlow, PyTorch, Scikit-learn, Keras</li>
-        <li>Computer Vision </li>
-        <li>Natural Language Processing (NLP) </li>
-        <li>Deep Learning </li>
-        <li>Neural Networks </li>
-        <li>Data Analysis and Visualization: Python, R, Power BI</li>
-    </ul>
-    <h1>Web Development</h1>
-    <ol>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React.js</li>
-        <li>Node.js</li>
-    </ol>
-    <h1>Databases</h1>
-    <ol>
-        <li>MySQL</li>
-        <li>MongoDB</li>
-    </ol>
-    <h1>Blockchain Development</h1>
-    <ul>
-        <li>Understanding Blockchain Technology</li>
-        <li>Security and Cryptography Skills</li>
-        <li>Smart Contracts: Solidity, Truffle Suite</li>
-        <li>Ethereum Blockchain Development</li>
-        <li>dApps Development</li>
-    </ul>
+    <h1>Technologies I Know</h1>
+    <div class="skills-grid">
+        <!-- AI & ML Skill -->
+        <div class="skill">
+            <i class="fas fa-brain"></i>
+            <h2>AI & ML</h2>
+        </div>
+        <!-- Web Development Skill -->
+        <div class="skill">
+            <i class="fas fa-code"></i>
+            <h2>Web Development</h2>
+        </div>
+        <!-- Cloud Computing Skill -->
+        <div class="skill">
+            <i class="fas fa-cloud"></i>
+            <h2>Cloud Technologies</h2>
+            <p>AWS, Google Cloud Platform</p>
+        </div>
+        <!-- Cybersecurity Skill -->
+        <div class="skill">
+            <i class="fas fa-chart-bar"></i>
+            <h2>Cybersecurity </h2>
+        </div>
+        <!-- Database Skill -->
+        <div class="skill">
+            <i class="fas fa-database"></i>
+            <h2>Database</h2>
+        </div>
+        <!-- Blockchain development Skill -->
+        <div class="skill">
+            <i class="fas fa-network-wired"></i>
+            <h2>Blockchain Technology</h2>
+        </div>
+        <!-- Add more skills as needed -->
+    </div>
 </body>
 </html>
+
