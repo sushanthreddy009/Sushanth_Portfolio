@@ -269,3 +269,101 @@ button:hover, input[type="submit"]:hover, input[type="button"]:hover, .button:ho
  appealing buttons. */
 
 
+
+
+
+
+
+
+
+
+/* ... existing CSS ... */
+
+/* Project Card Styles */
+.project-card {
+    background: var(--background-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    display: inline-block;
+    width: calc(25% - 40px); /* Four items per row, 20px margin on each side */
+    vertical-align: top;
+}
+
+.project-card img {
+    width: 100%;
+    display: block; /* Removes bottom space/gap */
+}
+
+.project-card h2 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: var(--primary-color);
+}
+
+.project-card p, .project-card ul {
+    padding: 0 1em;
+    margin: 0;
+}
+
+.project-card ul {
+    list-style-type: none; /* Removes default list styling */
+}
+
+.project-card a {
+    display: inline-block;
+    margin: 1em;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: var(--hover-effect);
+}
+
+/* Key Skills Styles */
+.key-skills {
+    font-size: 0.9em;
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.05); /* Slight tint */
+    padding: 0.5em;
+    margin: 1em 0;
+}
+
+.key-skills li {
+    display: inline; /* Display skills inline */
+    margin-right: 10px;
+}
+
+/* Hover Effects */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 1200px) {
+    .project-card {
+        width: calc(33.333% - 40px); /* Three items per row */
+    }
+}
+
+@media (max-width: 900px) {
+    .project-card {
+        width: calc(50% - 40px); /* Two items per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        width: calc(100% - 40px); /* One item per row */
+    }
+}
+
+/* ... additional styles ... */
