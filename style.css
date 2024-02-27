@@ -179,6 +179,7 @@ header, footer {
     padding: 20px;
     gap: 20px; /* Adjust the gap as needed */
 }
+
 /* Project Cards Section */
 .project-card {
     background-color: var(--background-secondary);
@@ -206,9 +207,10 @@ header, footer {
 
 .project-card h2 {
     padding: 10px;
-    background-color: var(--primary-color);
+    background-color: #ffc107; /* Changed to a bootstrap yellow color for visibility */
     color: var(--text-color);
     margin: 0;
+    margin-bottom: 20px; /* Increased gap between title and button */
 }
 
 /* Add margin below the image or description to create space before the button */
@@ -222,16 +224,18 @@ header, footer {
 
 .project-card button {
     padding: 10px;
-    background-color: var(--background-primary);
-    color: var(--text-color);
+    background-color: #007bff; /* Changed to a bootstrap blue color for a clickable look */
+    color: white; /* Ensures text on the button is readable */
     text-align: center;
     border: none;
+    border-radius: 5px; /* Added border-radius for a button-like appearance */
     margin-top: auto; /* Pushes the button to the bottom if flex is used */
     transition: background-color 0.3s ease;
 }
 
 .project-card button:hover {
-    background-color: var(--hover-effect);
+    background-color: #0056b3; /* Darker shade of blue for hover effect */
+    color: white;
 }
 
 
