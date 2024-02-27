@@ -9,45 +9,103 @@
 }
 
 body {
+    animation: fadeInContent 1s ease; /* Preserving your animation */
     background-image: linear-gradient(145deg, #121212, #1c1c1c); /* Shining effect */
 }
 
-header, footer, .project {
-    background-color: #1e1e1e; /* Darker shade for sections */
-    color: #f4f4f4; /* Light text for readability */
-}
-
-h1, h2, h3, p, ol, .project-link, a {
-    color: #f4f4f4; /* Ensure text is visible on dark backgrounds */
-}
-
-/* Button Styles */
-button, .button {
-    background: linear-gradient(145deg, #0056b3, #003a75);
-    border: none;
-    color: white;
-    padding: 10px 20px;
+header, footer {
     text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e; /* Darker shade for header/footer */
+    animation: fadeIn 1s ease; /* Preserving your animation */
+}
+
+h1, h2, h3 {
+    color: #76a9fa; /* Lighter blue for better visibility on dark background */
+}
+
+p, ol {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #f4f4f4; /* Adjusted for dark theme readability */
+}
+
+/* Enhanced Button and Link Styles */
+a, .project-link, button, .button {
+    color: #4db8ff; /* Brighter blue for links and buttons */
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    font-weight: bold;
+    background-color: transparent; /* Buttons and links do not have a background by default */
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
-button:hover, .button:hover {
-    background: linear-gradient(145deg, #007bff, #0056b3);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+a:hover, .project-link:hover, button:hover, .button:hover {
+    color: #1a8cff; /* Brighter on hover */
+    transform: translateY(-2px); /* Lift effect */
+    background-color: #2a2a2a; /* Subtle background for buttons on hover */
 }
 
-a:hover {
-    color: #0096ff; /* Brighter blue on hover for contrast */
-    transform: translateY(-2px);
+/* Audio Section and Other Sections */
+.audio-section, section {
+    border-bottom: 1px solid #333333; /* Adjusted for dark theme */
+    padding: 20px;
+    background-color: #2a2a2a; /* Slightly lighter than base for distinction */
 }
+
+/* Image Hover Effects */
+img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow for dark theme */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h1, h2, h3 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Project Styles */
+.project {
+    margin-bottom: 40px;
+    border: 1px solid #444; /* Adjusted for dark theme */
+    background-color: #2a2a2a; /* For distinction */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow for dark theme */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project h2 {
+    color: #76a9fa; /* Adjusted to fit the dark theme */
+}
+
+.project-details, .project-duration {
+    color: #cccccc; /* Lighter text for details for readability */
+}
+
+/* Preserving your fadeInContent animation */
+@keyframes fadeInContent {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 
 /* Include your original CSS here, replacing any conflicting styles with the above enhancements */
 
