@@ -277,86 +277,51 @@ button:hover, input[type="submit"]:hover, input[type="button"]:hover, .button:ho
 
 
 
-/* ... existing CSS ... */
+/* Add your existing styles here */
 
-/* Base styles for the card */
+/* Project Cards Styles */
 .project-card {
-  background: #1F1F1F; /* or the color you prefer */
-  color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin: 15px;
-  transition: all 0.3s ease;
+    width: 300px;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+    /* Add other styles such as border, padding, etc. */
 }
 
-/* Container for the card content */
-.project-card-content {
-  padding: 20px;
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
 }
 
-/* Title for each project */
-.project-card h2 {
-  font-size: 1.5rem; /* Adjust the font size to fit your design */
-  color: #ffffff;
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Add other styles such as border-radius, etc. */
 }
 
-/* Description for each project */
-.project-card p {
-  font-size: 1rem; /* Adjust the font size to fit your design */
-  line-height: 1.5;
-  color: #cccccc;
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-/* Style for the live/demo button */
-.project-card .live-button {
-  background-color: #22c55e; /* Green color for live button */
-  padding: 10px 20px;
-  color: #ffffff;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
-  border-radius: 5px;
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-/* Style for the GitHub button */
-.project-card .github-button {
-  background-color: #6b7280; /* Gray color for GitHub button */
-  padding: 10px 20px;
-  color: #ffffff;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-/* Grid layout for cards */
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-/* Hover effect for the card */
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .project-card-content {
-    padding: 15px;
-  }
-
-  .project-card h2 {
-    font-size: 1.25rem;
-  }
-
-  .project-card p {
-    font-size: 0.875rem;
-  }
-}
-
-/* ... additional styles ... */
+/* You may need to adjust styles based on your preferences */
