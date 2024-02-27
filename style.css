@@ -18,16 +18,7 @@ body {
     transition: background-color 0.5s ease;
 }
 
-/* Dynamic Background */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
-}
+
 
 /* Header & Footer with Unique Styles */
 header, footer {
