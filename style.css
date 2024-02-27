@@ -321,3 +321,48 @@ button, input[type="submit"], input[type="button"], .button {
 button:hover, input[type="submit"]:hover, input[type="button"]:hover, .button:hover {
     background-color: var(--hover-effect);
 }
+
+
+
+
+
+
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: var(--background-secondary);
+}
+
+#theme-toggle {
+    background-color: var(--background-primary);
+    color: var(--text-color);
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+}
+
+.resume-button,
+.contact-button {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover,
+.contact-button:hover {
+    background-color: var(--hover-effect);
+}
+body.dark-theme {
+    --background-primary: #262626; /* Dark background for dark theme */
+    --background-secondary: #333; /* Lighter dark background for sections */
+    --text-color: #fff; /* White text for dark theme */
+    /* Update other colors as needed for the dark theme */
+}
