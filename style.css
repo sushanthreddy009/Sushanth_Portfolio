@@ -179,7 +179,7 @@ header, footer {
     padding: 20px;
     gap: 20px; /* Adjust the gap as needed */
 }
-
+/* Project Cards Section */
 .project-card {
     background-color: var(--background-secondary);
     border-radius: 10px;
@@ -189,6 +189,8 @@ header, footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Ensures content is laid out vertically */
 }
 
 .project-card:hover {
@@ -209,27 +211,27 @@ header, footer {
     margin: 0;
 }
 
-.project-card p{
+/* Add margin below the image or description to create space before the button */
+.project-card p {
     padding: 10px;
     background-color: var(--background-primary);
     color: var(--text-color);
     text-align: center;
+    margin-bottom: 15px; /* Adjust as needed for space */
 }
 
-
-.project-button {
-  margin-top: 20px; /* Adjust the value as needed for desired spacing */
-  background-color: #3498db; /* This is a nice blue, but choose any color you like */
-  color: #ffffff; /* This is white, ensuring the text stands out against the button color */
-  padding: 10px 15px; /* Optional: Adjust padding to make the button bigger or smaller */
-  border: none; /* Optional: Remove the border for a cleaner look */
-  border-radius: 5px; /* Optional: Round the corners of the button */
-  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
-  transition: background-color 0.3s ease; /* Optional: Smooth transition for button hover effect */
+.project-card button {
+    padding: 10px;
+    background-color: var(--background-primary);
+    color: var(--text-color);
+    text-align: center;
+    border: none;
+    margin-top: auto; /* Pushes the button to the bottom if flex is used */
+    transition: background-color 0.3s ease;
 }
 
-.project-button:hover {
-  background-color: #2980b9; /* Darker shade of blue for hover effect */
+.project-card button:hover {
+    background-color: var(--hover-effect);
 }
 
 
